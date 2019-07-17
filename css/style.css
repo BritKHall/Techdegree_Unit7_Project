@@ -1,120 +1,27 @@
 /* =====================GRID===================== */
 
 .grid-contain {
-    display:grid;
-    grid-template-columns: 70px 1fr;
-    grid-template-rows: 55px 1fr;
+    display: grid ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
         'head head head'
-        'nav dash dash'
-        'nav graph1 graph1'
-        'nav graph2 graph3'
-        'nav social social'
-        'nav new-mem recent-act'
-        'nav message setting';
+        'nav nav nav'
+        'nav main main'
+        'nav main main'
+        'nav main main'
+        'nav main main'
+        'nav main main'
+        'nav main main'
+        'nav main main'
 }
 
 /* =====================head===================== */
-
-.head { 
-    grid-area: head; 
-    background-color: rgb(111, 111, 201);
-}    
-
-#app-logo {
-        font-family: "Open Sans", sans-serif;
-        color: white;
-        font-size: 1em;
-        vertical-align: middle;
-        display: inline-block;
-    }
-  
-#logo-your {
-    font-weight: 700;
-}
-
-#logo-app {
-    font-weight: 300;
-}
-
-.tm {
-    font-size: 0.5em;
-}
-
-.bell-icon {
-    width: 23px;
-    height: 23px;
-    margin-bottom: 0;
-    margin-right: 0.1 em;
-    vertical-align: middle;
-  }
-  
-  .bell-icon path {
-    fill: #b3b3e4;
-  }
-  
-  .bell-icon:hover path {
-    fill: #ffffff;
-  }
-
-  .profile-pic {
-      border-radius:100px;
-      width: 30px
-  }
-
-  .head-ul {
-    overflow: hidden;
-    list-style-type: none;
-    justify-content: center;
-  }
-  
-  .head-ul li {
-    display: inline-block;
-  }
+.header { grid-area: head;}
 
 /* =====================Navigation===================== */
-.nav { 
-    grid-area: nav; 
-    background-color: rgba(42, 42, 100, 0.856);
-}
 
-.sidenav {
-    height: 100%; 
-    width: 70px; 
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    z-index: -1;
-    background-color: #333564;
-    overflow-x: hidden;
-    padding-top: 60px;
-    padding-left: 0px;
-  }
+.nav { grid-area: nav; }
 
-
-
-  #IconDashboard,
-  #IconMembers,
-  #IconSettings,
-  #IconVisits {
-    width: 30px;
-    height: 30px;
-    fill: #333;
-    transition: 0.3s all ease-in-out;
-  }
-
-/* =====================Dashboard===================== */
-.dash { grid-area: dash; }
-.graph1 { grid-area: graph1; }
-.graph1 { grid-area: graph2; }
-.graph1 { grid-area: graph3; }
-.social { grid-area: social; }
-.new-mem { grid-area: new-mem; }
-.recent-act { grid-area:recent-act; }
-.message{ grid-area: message; }
-.setting { grid-area: setting; }
-
-
-
-
-
+/* =====================main===================== */
+.main { grid-area: main; }
