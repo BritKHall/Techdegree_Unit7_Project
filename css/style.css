@@ -15,11 +15,28 @@
     .header { 
       grid-area: head;
       background-color: #7a7fc9;
-      display:flex;
+    }
+
+    .head {
+      display: flex;
+      justify-content:space-between;
+    }
+
+    .name {
+      text-align: left;
     }
 
     .bell {
-      width:30px
+      width:30px;
+      
+    }
+
+    #bell-layer.bell{
+      fill:rgba(255, 255, 255, 0.336);
+    }
+
+    #bell-layer.bell:hover{
+      fill: white;
     }
 
     .profile-pic {
@@ -30,9 +47,27 @@
     .nav { 
       grid-area: nav; 
       background-color: #333564;
-      display: flex;
     }
 
+    .nav a {
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav svg{
+      width:35px;
+      margin: 20px;
+    }
+
+    #nav-img{
+      fill:rgba(255, 255, 255, 0.336);
+    }
+    
+    #nav-img:hover{
+      fill:rgb(255, 255, 255);
+      border-bottom: 5px dotted rgb(115, 151, 81);
+      padding:5px
+    }
 /* =====================main===================== */
     
     .main { 
@@ -40,6 +75,11 @@
       display:grid;
     }
   
+   .soc-img {
+    width:30px;
+    }
+
+
     .widget-container-full, .widget-container-half {
       width: 95vw;
       }
@@ -53,7 +93,7 @@
     @media (min-width: 768px) {
 
       .grid-contain {
-      grid-template-columns: 55px 1fr;
+      grid-template-columns: 60px 1fr;
       grid-template-areas:
       "head head"
       "nav main";
@@ -62,6 +102,23 @@
       .main {
         grid-template-columns: 50% ;
         }
+
+      .nav a {
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        margin-top:45px;
+      }
+      
+      .nav svg{
+        margin: 10px 10px 40px 10px;
+      }
+
+      #nav-img:hover{
+        border-left: 5px dotted rgb(115, 151, 81);
+        border-bottom:none;
+      }
+
       
       .traffic,
       .social,
@@ -87,7 +144,6 @@
         }
 
       .widget-container-half {
-      Front End Techdegree
       width: 45vw;
       }
           
