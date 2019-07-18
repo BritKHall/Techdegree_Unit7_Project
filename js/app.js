@@ -110,4 +110,32 @@ const mobileData = {
         ]
       }]
     };
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
+    });
     
+    
+
+//===================messages=============================//
+
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
+
+send.addEventListener('click', () => {
+if (user.value === "" && message.value === "") {
+    alert("The USER and MESSAGE field must be filled before sending.");
+        } else if(user.value ==="") {
+            alert("Please state the USER.");
+        } else if(message.value ==="") {
+            alert("You cannot send an empty MESSAGE.");
+        } else {
+            alert('Message sent to: ${user.value}');
+        }
+    });
+
+send();
+        
