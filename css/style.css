@@ -231,13 +231,42 @@ body {
       color:rgba(0, 0, 0, 0.233);
     }
 
+    .alert{
+      display: flex;
+      background-color: #c74848f5;
+      padding-right: 20px;
+      padding-left: 20px;
+      text-align: left;
+      color: white;
+      border-radius: 6px;
+      font-size: 14px;
+      width:99%;
+    }
+
+    .alert-banner {
+      width: 100%;
+      display:grid;
+      grid-template-areas: 
+      "mess close";
+      
+    }
+
+    .alert-message{
+      grid-area: mess 
+    }
+    
+    .alert-banner-close {
+     grid-area: close;
+     display: flex;
+     justify-content: flex-end
+    }
   
     .soc-img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       margin: 0px;
-    background-color: rgb(45, 45, 73);
+      background-color: rgb(45, 45, 73);
     }
 
     .toggle-wrap {
@@ -287,15 +316,6 @@ body {
         width:50px;
       }
 
-    .headline{
-      float: left;
-      width: 15%;
-    }
-    .search-main{
-      float: right;
-      width: 85%;
-
-    }
   
       .dash,
       .traffic,
