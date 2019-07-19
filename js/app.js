@@ -23,7 +23,7 @@ alert.addEventListener('click', e => {
 
 // ===================Charts===================================//
 
-// -------------------------------------------------------------------------line graph
+// ----------------------------------------------------------------line graph
 let trafficCanvas = document.getElementById("chart1-chart");
 
 let trafficData = {
@@ -299,7 +299,6 @@ let trafficChart = new Chart(trafficCanvas, {
             }
         ]
         },
-        // Configuration options go here
         options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -328,10 +327,7 @@ let trafficChart = new Chart(trafficCanvas, {
     
     monthlyTime.addEventListener("click", function() {
     var chart = new Chart(trafficCanvas, {
-        // The type of chart we want to create
         type: "line",
-    
-        // The data for our dataset
         data: {
         labels: [
             "",
@@ -378,7 +374,6 @@ let trafficChart = new Chart(trafficCanvas, {
             }
         ]
         },
-        // Configuration options go here
         options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -407,7 +402,7 @@ let trafficChart = new Chart(trafficCanvas, {
         
     
 
-//----------------------------------------------------------------------------daily graph
+//-----------------------------------------------------------daily graph
 let dailyCanvas = document.getElementById("chart2-chart");
 
 const dailyData = {
@@ -438,7 +433,7 @@ const dailyData = {
         options: dailyOptions
         });
 
-//----------------------------------------------------------------------Mobile Donut graph
+//---------------------------------------------------------Mobile Donut graph
 
 let mobileCanvas = document.getElementById("chart3-chart");
 
@@ -493,3 +488,6 @@ if (user.value === "" && message.value === "") {
         }
     });
         
+
+
+
