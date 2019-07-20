@@ -472,22 +472,20 @@ let mobileChart = new Chart(mobileCanvas, {
 
 //===================messages=============================//
 
-const user = document.getElementById("userField");
-const message = document.getElementById("messageField");
-const send = document.getElementById("send");
-
-send.addEventListener('click', () => {
-if (user.value === "" && message.value === "") {
-    alert("The USER and MESSAGE field must be filled before sending.");
-        } else if(user.value ==="") {
-            alert("Please state the USER.");
-        } else if(message.value ==="") {
-            alert("You cannot send an empty MESSAGE.");
-        } else {
-            alert('Message sent to: ${user.value}');
-        }
-    });
-        
-
-
-
+  
+  //notification//
+  
+  var popup = document.getElementById("myPopup");
+  var bellIcon = document.getElementById("bell");
+  
+  bellIcon.addEventListener("click", function() {
+    popup.style.display = "block";
+  });
+  
+  var closeNoti = document.getElementById("closeNoti");
+  var badge = document.getElementById("badge");
+  
+  closeNoti.addEventListener("click", function() {
+    popup.style.display = "none";
+    badge.style.display = "none";
+  });
