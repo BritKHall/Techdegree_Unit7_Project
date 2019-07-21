@@ -2,10 +2,10 @@
 
 
 // ===================Alert===================================//
-const alert = document.getElementById("alert");
+const red = document.getElementById("alert");
 
 
-alert.innerHTML =
+red.innerHTML =
 `
 <div class="alert-banner">
     <p class= "alert-message"><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
@@ -14,12 +14,34 @@ alert.innerHTML =
 </div>
 `
 
-alert.addEventListener('click', e => {
+red.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none"
+    red.style.display = "none"
     }
 });
+
+
+//=====================notification=================================//
+  
+  const popup = document.getElementById("myPopup");
+  const bellIcon = document.getElementById("bell");
+  
+  
+  bellIcon.addEventListener("click", function() {
+    popup.style.display = "block";
+    bellIcon.style.visibility = "hidden";
+    badge.style.visibility = "hidden";
+  });
+  
+ const closeNoti = document.getElementById("closeNoti");
+ const badge = document.getElementById("badge");
+  
+  closeNoti.addEventListener("click", function() {
+    popup.style.display = "none";
+    badge.style.display = "none";
+    bellIcon.style.visibility = "visible";
+  });
 
 // ===================Charts===================================//
 
@@ -76,7 +98,7 @@ let trafficOptions = {
          duration: 1200,
     },
     scales: {
-        yAxes: [{
+        yAxes:[{
          ticks: {
             beginAtZero:true
           }
@@ -85,6 +107,7 @@ let trafficOptions = {
     legend : {
           display: false
         }
+        
     };
 
 
@@ -441,7 +464,7 @@ const mobileData = {
     labels: ["Desktop", "Tablet", "Phones"],
     datasets: [{
         label: '# of Users',
-        data: [2000, 500, 1865,],
+        data: [2063, 504, 1865,],
         borderWidth: 0,
          backgroundColor: [
             '#7477BF',
@@ -471,21 +494,25 @@ let mobileChart = new Chart(mobileCanvas, {
     
 
 //===================messages=============================//
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
+
 
   
-  //notification//
-  
-  var popup = document.getElementById("myPopup");
-  var bellIcon = document.getElementById("bell");
-  
-  bellIcon.addEventListener("click", function() {
-    popup.style.display = "block";
-  });
-  
-  var closeNoti = document.getElementById("closeNoti");
-  var badge = document.getElementById("badge");
-  
-  closeNoti.addEventListener("click", function() {
-    popup.style.display = "none";
-    badge.style.display = "none";
-  });
+send.addEventListener('click', () => {
+    // ensure user and message fields are filled out
+    if (user.value === "" && message.value === "") {
+    alert("Please fill out USER and MESSAGE fields before sending");
+    } else if (user.value === "" ) {
+    alert("USER field must be filled out before sending");
+    } else if (message.value === "" ) {
+    alert("MESSAGE field must be filled out before sending");
+    } else {
+    alert(`Message successfully sent to: ${user.value}`);
+    }
+    });
+
+
+//===================local storage=============================//
+
