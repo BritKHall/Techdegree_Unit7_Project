@@ -199,11 +199,11 @@
       margin: 20px;
     }
 
-    #nav-img{
+    .nav-img{
       fill:rgba(255, 255, 255, 0.336);
     }
     
-    #nav-img:hover{
+    .nav-img:hover{
       fill:rgb(255, 255, 255);
       border-bottom: 5px dotted rgb(0, 255, 170);
       padding:5px;
@@ -744,7 +744,7 @@
         margin: 10px 10px 40px 10px;
       }
 
-      #nav-img:hover{
+      .nav-img:hover{
         border-left: 5px dotted rgb(0, 255, 170);
         border-bottom:none;
         width:50px;

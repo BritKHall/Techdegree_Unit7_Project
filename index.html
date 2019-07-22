@@ -36,14 +36,14 @@
             </div>
             <span class="badge" id="badge">2</span>
 
-            <span class="popup" id="myPopup" style="display:none;">
+            <div class="popup" id="myPopup" style="display:none;">
                 <span class="close" id="closeNoti">×</span>
                 <p><strong>Peter Taylor</strong> responsed to your video</p>
                 <p>4 hours ago  Date: Oct 15,2015</p>
                 <hr>
                 <p><strong>David Kalloge</strong> commented on your Facebook post</p>
                 <p>5 hours ago Date: Oct 15,2015</p>
-                </span>
+            </div>
 
             <div id="seperation-line">
                 <svg version="1.1" id="line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -58,19 +58,19 @@
             </div>
             <h3 class="username">Jane</h3>
             <h3 class="user-last-name">Davis</h3>
-
+            
           </div>
         </div>
         <!-- =============================================Navigation===============================================-->
-
-
+        
+        
         <div class="nav">
           <div class="nav-wrap">
             <a href="#dash">
               <p>Dashboard</p>
             <!-- <img src="images/svgs/icon-dashboard.svg" alt="dashboard"> -->
-              <svg version="1.1" id="nav-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="db">
+              <svg version="1.1" id="dash-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="nav-img">
                 <style type="text/css">
                 </style>
               <g id="_x31_0_20_">
@@ -89,8 +89,8 @@
             <a href="#mem">
               <p>Members</p>
             <!-- <img src="images/svgs/icon-members.svg" alt="members"> -->
-            <svg version="1.1" id="nav-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="mem"class="mem">
+            <svg version="1.1" id="mem-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="nav-img">
             <style type="text/css">
               </style>
               <g id="_x37__17_">
@@ -109,8 +109,8 @@
               <a href="#vis">
                 <p>Vists</p>
               <!-- <img src="images/svgs//icon-visits.svg" alt="visits"> -->
-              <svg version="1.1" id="nav-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="vis">
+              <svg version="1.1" id="vis-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="nav-img">
               <style type="text/css">
               </style>
               <g id="_x35__10_">
@@ -123,13 +123,13 @@
                 </g>
               </g>
               </svg>
-
+              
               </a>
               <a href="#set">
                 <p>settings</p>
               <!-- <img src="images/svgs/icon-settings.svg" alt="settings"> -->
-              <svg version="1.1" id="nav-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="set">
+              <svg version="1.1" id="set-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="nav-img">
                 <style type="text/css">
                 </style>
                 <g id="_x32__16_">
@@ -146,13 +146,13 @@
                   </g>
               </g>
               </svg>
-
-
-            </a>
+          
+          
+            </a>  
           </div>
         </div>
         <!-- =============================================Main===============================================-->
-
+                  
         <div class="main">
 
                   <!-- Dashboard/search/alert row 1 and 2 col 1 and 2 -->
@@ -185,12 +185,12 @@
                       <canvas id="chart1-chart"></canvas>
                     </div>
                   </section>
-
+                  
                   <!--Daily Traffic row 4 col 1-->
                   <section class=daily-traffic>
                     <h3>Daily Traffic</h3>
                     <div class="widget-container-half">
-
+                    
                       <canvas id="chart2-chart"></canvas>
                     </div>
                   </section>
@@ -199,7 +199,7 @@
                   <section class="mobile-traffic">
                     <h3>Mobile Users</h3>
                       <div class="widget-container-half">
-
+                      
                         <canvas id="chart3-chart"></canvas>
                       </div>
                     </section>
@@ -208,7 +208,7 @@
                   <div class="social">
                     <div class="soc-title">
                       <h3>Social Stats</h3>
-                    </div>
+                    </div> 
                       <div class="soc-contain">
                     <!-- fb -->
                         <div class="social-stats">
@@ -237,7 +237,7 @@
                           <div class="soc-text">
                               <h5>Twitter</h5>
                               <p>20,047</p>
-                          </div>
+                          </div>   
                         </div>
                           <!-- Google -->
                         <div class="social-stats">
@@ -261,12 +261,12 @@
                                 c-1.9,0-3.5-0.6-4.9-1.9c-1.4-1.3-2-2.8-2-4.7c0-1.8,0.6-3.4,1.8-4.8C6,1.7,7.5,0.8,9.3,0.4C10.5,0.1,11.7,0,12.9,0z M32.8,4.9v2.5
                                 h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z"/>
                               </svg>
-
+                          
                           </div>
                           <div class="soc-text">
                               <h5>Google</h5>
                               <p>9,203</p>
-
+                              
                         </div>
                       </div>
                     </div>
@@ -275,7 +275,7 @@
                   <section class="new-mem" id="mem">
                     <h3>New Members</h3>
                     <div class= "mem-info" id="mem1">
-                        <img src="images/member-1.jpg" alt="member profile picture">
+                        <img src="images/member-1.jpg" alt="member profile picture">  
                         <div class="mem-text">
                             <p>Jane Davis</p>
                             <a href="mailto:JDavis001@example.com"> JDavis001@example.com</a>
@@ -285,7 +285,7 @@
                         </div>
                     </div>
                     <div class= "mem-info">
-                        <img src="images/member-2.jpg" alt="member profile picture">
+                        <img src="images/member-2.jpg" alt="member profile picture">  
                         <div class="mem-text">
                             <p>Frank Scott</p>
                             <a href="mailto:FScott002@example.com">FScott002@example.com</a>
@@ -295,7 +295,7 @@
                         </div>
                     </div>
                     <div class= "mem-info">
-                        <img src="images/member-3.jpg" alt="member profile picture">
+                        <img src="images/member-3.jpg" alt="member profile picture">  
                         <div class="mem-text">
                             <p>Liz Henders</p>
                             <a href="mailto:LHenders003@example.com">LHenders003@example.com</a>
@@ -305,7 +305,7 @@
                         </div>
                     </div>
                     <div class= "mem-info">
-                        <img src="images/member-4.jpg" alt="member profile picture">
+                        <img src="images/member-4.jpg" alt="member profile picture">  
                         <div class="mem-text">
                             <p>Daniel George</p>
                             <a href="mailto:DGeorge004@example.com">DGeorge004@example.com</a>
@@ -314,7 +314,7 @@
                         <p>5/9/19</p>
                         </div>
                     </div>
-
+                           
                   </section>
                   <!-- Recent Activity row 6 col 2-->
                   <section class="recent-act" id="vis">
@@ -353,25 +353,25 @@
                     </div>
                   </section>
                   <!-- Message User row 7 col 1-->
-                  <section class="message" id="message">
+                  <section class="message" id="message"> 
                     <h3>Message User</h3>
                         <form class="widget-container">
-
+                        
                         <input autocomplete="off" type="text" placeholder="Search users"
                         class="form-field" id="userField">
-
+                        
                         <textarea autocomplete="off" placeholder="Message for user" class="form-area"
                         id= "messageField" ></textarea>
-
+                        
                         <button class="button-primary" id="send" >Send</button>
                         </form>
-
+                        
 
                   </section>
                   <!-- Settings row 7 col 2-->
                   <section class="settings" id="set">
                     <h3>Settings</h3>
-
+   
                     <div class="setting-form">
 
 
@@ -379,11 +379,11 @@
 
                           <label id="setting-ele1" class="switch-light switch-ios" onclick="">
                               <input  type="checkbox" id="toggle-1" name="toggle-1" >
-
+                            
                               <p class="title-noti">
                               Send Email Notifications
                               </p>
-
+                            
                               <span class="toggle-noti">
                                 <span>Off</span>
                                 <span>On</span>
@@ -393,11 +393,11 @@
 
                           <label id="setting-ele2" class="switch-light switch-ios" onclick="">
                                 <input type="checkbox" id="toggle-2" name="toggle-2" >
-
-
+                              
+                                
                                 <p class="title-public">Set Profile to Public</p>
-
-
+                                
+                              
                                 <span class="toggle-public">
                                   <span>Off</span>
                                   <span>On</span>
@@ -466,17 +466,17 @@
 
                         <button class="btn-save" id="save">Save</button>
                         <button class="btn-close" id="cancel">Cancel</button>
-                    </div>
+                    </div>       
                   </section>
     </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script> 
   <script src="js/app.js" type="text/javascript"></script>
   <script src="js/jquery.js" type="text/javascript"></script>
-  <script src="js/jquery-ui.js"
+  <script src="js/jquery-ui.js" 
   type="text/javascript"></script>
-
+  
   <!---------- autocomplete -------------->
   <script>
     const users = ["Daniel George","Frank Scott", "Jane Davis","Liz Henderson"];
@@ -484,10 +484,10 @@
      $("#userField").autocomplete({
       source:users
      },{});
+  
+  </script>  
 
-  </script>
-
-</body>
+</body>  
 
 
 </html>
