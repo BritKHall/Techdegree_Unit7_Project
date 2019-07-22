@@ -485,6 +485,10 @@
       padding: 20px;
     }
 
+    .recent-act{
+      border-bottom:1px solid rgba(0, 0, 0, 0.151);
+    }
+
     .new-mem,
     .recent-act{
       display:flex;
@@ -672,15 +676,43 @@
       align-content: left;
       text-transform: uppercase;
       font-weight: 600;
-      margin-top: 30px;
+      margin-top: 5px;
     }
 
     .settings button:hover{
       background-color: #49195c;
     }
 
+    .popup-box {
+      display: none;
+      position: absolute;
+      width: 360px;
+      height:75px;
+      text-align: center;
+      line-height: 24px;
+      background-color: #b9dfb1bd;
+      border-radius: 5px;
+      margin-top: 60px;
+   }
 
+   .popup-box-close {
+    display: none;
+    position: absolute;
+    width: 360px;
+    height:75px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #9b453fc2;
+    border-radius: 5px;
+    margin-top: 60px;
+ }
+   
+   .popup-box h1,
+   .popup-box-close h1 {
+      font-size: 20px;
+   }
 
+ 
 
 
     
@@ -760,6 +792,10 @@
         padding-left:80px;
         margin:0;
         float: none;
+      }
+
+      .message{
+        border-bottom:none;
       }
 
       .widget-container-full {
