@@ -378,7 +378,7 @@
                         <div class="toggle-wrap">
 
                           <label id="setting-ele1" class="switch-light switch-ios" onclick="">
-                              <input  type="checkbox"id="toggle-1">
+                              <input  type="checkbox" id="toggle-1" name="toggle-1" >
                             
                               <p class="title-noti">
                               Send Email Notifications
@@ -392,7 +392,7 @@
                           </label>
 
                           <label id="setting-ele2" class="switch-light switch-ios" onclick="">
-                                <input type="checkbox" id="toggle-2">
+                                <input type="checkbox" id="toggle-2" name="toggle-2" >
                               
                                 
                                 <p class="title-public">Set Profile to Public</p>
@@ -408,7 +408,7 @@
                         </div>
                       </div>
 
-                    <select class="form-field" id="timezones">
+                    <select name="timezones" class="form-field" id="timezones">
                         <option disabled selected>Select a Timezone</option>
                         <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                         <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
@@ -452,7 +452,7 @@
                         <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
                     </select>
                     <div class="settings-button" >
-                        <button class="button-primary" id="save">Save</button>
+                        <button class="btn-save" id="save">Save</button>
                         <button class="button-disabled" id="cancel">Cancel</button>
                     </div>       
                   </section>

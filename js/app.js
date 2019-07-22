@@ -516,3 +516,104 @@ send.addEventListener('click', () => {
 
 //===================local storage=============================//
 
+// var profile_public = document.getElementsByID("toggle-1")
+// var set2 = document.getElementsByID("toggle-2")
+// var set3 = document.getElementsByID("timezone")
+// var button = document.getElementById("save")
+
+// const btnSave = document.getElementById("save")
+// const settings = document.getElementById("set")
+// const email = document.getElementsByID("toggle-1")
+// const profile =document.getElementsByID("toggle-2")
+// const timeZ = document.getElementsByID("timezone")
+
+
+// funtion getSettings(){
+//         if btnSave.addEventListener("click", event => {
+//            localStorage.setItem('email', email.checked)
+//            localStorage.setItem('timezone', timeZ.value)
+//         }
+
+//         if set.addEventListener("load", event => {
+//             localStorage.setItem('email', email.checked)
+//             localStorage.setItem('timezone', timeZ.value)
+//          }
+// });
+
+
+
+
+
+function getSettings() {
+    // GET and SET EMAIL TOGGLE
+    if (localStorage.getItem("yourapp_email_notification") === null) {
+       document.getElementById("toggle-1").checked = true;
+    } else {
+       // set the setting
+       let email_notification = localStorage.getItem(
+          "yourapp_email_notification"
+       );
+       if (email_notification === "true") {
+          document.getElementById("toggle-1").checked = true;
+       }
+       if (email_notification === "false") {
+          document.getElementById("toggle-1").checked = false;
+       }
+       if (email_notification !== "true" && email_notification !== "false") {
+          // key corrupted - EXTERMINATE!
+          localStorage.removeItem("yourapp_email_notification");
+       }
+    }
+ 
+    // GET AND SET PROFILE TOGGLE
+    if (localStorage.getItem("yourapp_profile_public") === null) {
+       document.getElementById("toggle-2").checked = true;
+    } else {
+       // set the setting
+       let profile_public = localStorage.getItem("yourapp_profile_public");
+ 
+       if (profile_public === "true") {
+          document.getElementById("toggle-2").checked = true;
+       }
+       if (profile_public === "false") {
+          document.getElementById("toggle-2").checked = false;
+       }
+       if (profile_public !== "true" && profile_public !== "false") {
+          // key corrupted - EXTERMINATE!
+          localStorage.removeItem("yourapp_profile_public");
+       }
+    }
+ 
+    // GET AND SET TIMEZONE
+    let timezone = localStorage.getItem("timezones");
+    if (timezone === null) {
+       document.getElementById("timezones").value = 0;
+    } else {
+       // set the setting
+       document.getElementById("timezones").value = timezone;
+    }
+ }
+ 
+ function saveSettings() {
+    // SAVE THE SETTINGS TO LOCAL STORAGE
+    let email_notification = document.getElementById("toggle-1").checked;
+    let public_profile = document.getElementById("toggle-2").checked;
+    let timezone = document.getElementById("timezones").value;
+ 
+    localStorage.setItem("yourapp_email_notification", email_notification);
+    localStorage.setItem("yourapp_profile_public", public_profile);
+    localStorage.setItem("timezones", timezone);
+ }
+
+
+ document.addEventListener("click", event => {
+        if (event.target.className == "btn-save") {
+            saveSettings();
+        }
+ });
+
+ function main() {
+    getSettings();
+ }
+ 
+main();
