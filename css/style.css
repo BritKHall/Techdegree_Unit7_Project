@@ -646,8 +646,7 @@
       
     }
 
-    #setting-ele1 p,
-    #setting-ele2 p{
+    .toggle-wrap{
      color:rgb(143, 143, 143);
     }
 
@@ -663,12 +662,11 @@
       outline:none;
     }
 
-    .settings button{
+    .btn-save,
+    .btn-close{
       padding: 12px;
       width:49%;
       border-radius: 6px;
-      background-color: #7860a5;
-      border: 1px solid #7860a5;
       margin-bottom: 1.5em;
       color: #fff;
       font-size: 0.9em;
@@ -677,15 +675,28 @@
       margin-top: 5px;
     }
 
-    .settings button:hover{
+    .btn-save{
+      background-color: #7860a5;
+      border: 1px solid #7860a5;
+    }
+
+    .btn-close{
+      background-color: #929292;
+      border: 1px solid #bebebe;
+    }
+
+    .btn-save:hover{
       background-color: #49195c;
+    }
+
+    .btn-close:hover{
+      background-color: #646464;
     }
 
     .popup-box {
       display: none;
       position: absolute;
       width: 360px;
-      height:75px;
       text-align: center;
       line-height: 24px;
       background-color: #b9dfb1bd;
@@ -697,7 +708,6 @@
     display: none;
     position: absolute;
     width: 360px;
-    height:75px;
     text-align: center;
     line-height: 24px;
     background-color: #9b453fc2;
@@ -705,9 +715,9 @@
     margin-top: 60px;
  }
    
-   .popup-box h1,
-   .popup-box-close h1 {
-      font-size: 20px;
+   .popup-box h4,
+   .popup-box-close h4 {
+      font-size: 14px;
    }
 
  
